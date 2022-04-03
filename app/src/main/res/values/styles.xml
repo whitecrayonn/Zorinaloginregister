@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Zorina" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="color">@color/primaryfontLogRegColor</item>
+        <item name="color">@color/secondfontLogRegColor</item>
+        <item name="color">@color/thirdLogRegColor</item>
+    </style>
+</resources>
