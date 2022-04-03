@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
     android:background="@color/primaryColor"
-    >
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ic_back"
         android:src="@drawable/ic_back"
-        android:onClick="ic_back"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_header"
@@ -23,49 +24,42 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/back"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/poppinsbold"
         android:text="CREATE NEW ACCOUNT"
         android:textAlignment="center"
         android:textColor="@color/primaryfontLogRegColor"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/text_loginhere"
-        android:layout_below="@+id/text_header"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsregular"
-            android:text="Already Registered ?"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinssemibold"
-            android:text=" Log in here !"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            />
-
-    </LinearLayout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/womanpainting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_loginhere" />
 
     <LinearLayout
         android:id="@+id/linearlayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="403dp"
+        android:layout_height="251dp"
         android:layout_below="@id/text_loginhere"
         android:orientation="vertical"
-        android:padding="9dp">
+        android:padding="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_header">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,7 +73,7 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonshape2"
             android:backgroundTint="@color/white"
             android:hint="Enter Your Name"
@@ -98,7 +92,7 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonshape2"
             android:backgroundTint="@color/white"
             android:hint="Enter Your Email"
@@ -117,7 +111,7 @@
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonshape2"
             android:backgroundTint="@color/white"
             android:hint="Enter Your Password"
@@ -136,40 +130,76 @@
         <EditText
             android:id="@+id/datebirth"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/buttonshape2"
             android:backgroundTint="@color/white"
             android:hint="Enter Your Date of Birth"
             android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_loginhere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_header"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerbutton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Already Registered ?"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text=" Log in here !"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/registerbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_below="@id/linearlayout1"
         android:layout_centerInParent="true"
-        android:layout_marginTop="15dp"
-        android:width="308dp"
+        android:width="0dp"
         android:background="@drawable/buttonshape"
         android:fontFamily="@font/poppinsbold"
         android:text="Register"
         android:textColor="@color/white"
         android:textSize="16dp"
-        />
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout1" />
 
-    <ImageView
-        android:layout_width="157dp"
-        android:layout_height="164dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="286dp"
-        android:layout_marginTop="579dp"
-        android:layout_marginEnd="-32dp"
-        android:layout_marginBottom="-12dp"
-        android:src="@drawable/womanpainting" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
